@@ -1,0 +1,16 @@
+abdelfatah_maher@cloudshell:~ (strong-skyline-258316)$ kubectl cluster-info
+Kubernetes master is running at https://104.154.103.5
+GLBCDefaultBackend is running at https://104.154.103.5/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy
+Heapster is running at https://104.154.103.5/api/v1/namespaces/kube-system/services/heapster/proxy
+KubeDNS is running at https://104.154.103.5/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Metrics-server is running at https://104.154.103.5/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
+
+abdelfatah_maher@cloudshell:~ (strong-skyline-258316)$ kubectl get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+house-predicition-4-5cdc94c4d-72n87   1/1     Running   0          18m
+
+abdelfatah_maher@cloudshell:~/flask-sklearn (strong-skyline-258316)$ kubectl port-forward house-predicition-4-5cdc94c4d-72n87 2525:80
+Forwarding from 127.0.0.1:2525 -> 80
+
+[2020-04-12 01:43:13,459] INFO in app: prediction [20.35373177134412]
+41.239.197.19 - - [12/Apr/2020 01:46:14] "POST /predict HTTP/1.1" 200 -
