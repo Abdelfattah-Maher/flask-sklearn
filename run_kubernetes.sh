@@ -4,7 +4,7 @@
 
 # Step 1:
 # This is your Docker ID
-dockerpath="docker push abdelfatahmaher/house-predicition"
+dockerpath="abdelfatahmaher/house-predicition:v1.0"
 
 # Step 2
 # Run in Docker Hub container with kubernetes
