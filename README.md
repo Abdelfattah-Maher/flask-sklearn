@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Abdelfattah-Maher/flask-sklearn.svg?style=svg)](https://circleci.com/gh/Abdelfattah-Maher/flask-sklearn)
+
 ## Install
 
 * Create a virtualenv and source
