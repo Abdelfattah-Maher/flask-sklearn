@@ -25,7 +25,7 @@ def home():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    """Performs an sklearn prediction
+  """Performs an sklearn prediction
 
     input looks like:
             {
@@ -53,15 +53,17 @@ def predict():
 
     """
 
-    json_payload = request.json
-    LOG.info(f"JSON payload: {json_payload}")
-    inference_payload = pd.DataFrame(json_payload)
-    LOG.info(f"inference payload DataFrame: {inference_payload}")
-    scaled_payload = scale(inference_payload)
-    prediction = list(clf.predict(scaled_payload))
-    LOG.info(f"prediction {prediction}")
-    #name = 'Developer X.'
-    return jsonify({'prediction': prediction})
+  # Logging the input payload
+  json_payload = request.json
+  LOG.info(f"JSON payload: \n{json_payload}")
+  inference_payload = pd.DataFrame(json_payload)
+  LOG.info(f"Inference payload DataFrame: \n{inference_payload}")
+  # scale the input
+  scaled_payload = scale(inference_payload)
+  # get an output prediction from the pretrained model, clf
+  prediction = list(clf.predict(scaled_payload))
+  # TO DO:  Log the output prediction value
+  return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
     clf = joblib.load("boston_housing_prediction.joblib")
