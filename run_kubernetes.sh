@@ -4,7 +4,7 @@
 
 # Step 1:
 # This is your Docker ID
-dockerpath="flask-sklearn"
+dockerpath="docker push abdelfatahmaher/house-predicition"
 
 # Step 2
 # Run in Docker Hub container with kubernetes
@@ -20,5 +20,3 @@ kubectl get pods
 # Step 4:
 # Forward the container port to host
 kubectl port-forward house-predicition 8000:80
-
-
