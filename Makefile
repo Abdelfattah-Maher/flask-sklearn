@@ -6,7 +6,7 @@
 setup:
 	# Create python virtualenv & source it
 	# source ~/.udacity-devops/bin/activate
-	python3 -m venv ~/.house-predicition
+	python3 -m venv venv
 
 install:
 	# This should be run from inside a virtualenv
