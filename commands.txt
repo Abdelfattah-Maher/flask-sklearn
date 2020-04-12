@@ -1,0 +1,7 @@
+
+minikube version
+
+minikube start
+
+kubectl cluster-info
+kubectl get nodes
