@@ -8,10 +8,10 @@ dockerpath="abdelfatahmaher/house-predicition:v1.0"
 
 # Step 2
 # Run in Docker Hub container with kubernetes
-kubectl run house-predicition\
-    --generator=run-pod/v1
-    --image=$dockerpath
-    --port=80 --labels app=house-predicition
+kubectl run house-predicition --image=$dockerpath --port=80 
+#    --labels app=house-predicition
+#   --generator=run-pod/v1
+
 
 # Step 3:
 # List kubernetes pods
