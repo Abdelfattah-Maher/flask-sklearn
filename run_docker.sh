@@ -12,4 +12,4 @@ docker image ls
 
 # Step 3: 
 # Run flask app
-docker run -it -p 8000:2525 --name predicit-server abdelfatahmaher/house-predicition:v1.0 bash
+docker run -it -p 8000:80 --name predicit-server abdelfatahmaher/house-predicition:v1.0 bash

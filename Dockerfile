@@ -16,7 +16,7 @@ RUN pip install --upgrade pip &&\
 
 ## Complete Step 4:
 # Expose port 80
-EXPOSE 2525
+EXPOSE 80
 #docker run -p 80:80/tcp
 
 ## Complete Step 5:
